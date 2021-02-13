@@ -4,7 +4,7 @@ import math
 def getOpenConnection(user='postgres', password='postgre@123', dbname='postgres'):
     return psycopg2.connect("dbname='" + dbname + "' user='" + user + "' host='localhost' password='" + password + "'")
 
-
+# To load the data from csv to databases
 def loadRatings(ratingstablename, ratingsfilepath, openconnection):
     cursor = openconnection.cursor()
     cursor.execute('''
